@@ -7,7 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from '@/components/ui/navigation-menu'
+} from "@/components/ui/navigation-menu";
 
 import {
   Drawer,
@@ -18,14 +18,14 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/drawer'
-import { Button } from './ui/button'
-import { MenuIcon } from 'lucide-react'
-import Link from 'next/link'
+} from "@/components/ui/drawer";
+import { Button } from "./ui/button";
+import { MenuIcon } from "lucide-react";
+import Link from "next/link";
 
 function Header() {
   return (
-    <header>
+    <header className="border-b shadow-sm sticky top-0 bg-white z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* logo */}
 
@@ -84,11 +84,13 @@ function Header() {
         {/* login button */}
 
         <div>
-          <Button>Login</Button>
+          <Button>
+            <Link href="/login">Login</Link>
+          </Button>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
